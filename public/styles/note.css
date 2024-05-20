@@ -1,0 +1,39 @@
+
+.note-content {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.note-content-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: start;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.note-content-child > .img-cover {
+    margin-right: 50px;
+}
+
+.note-content-child p {
+    font-size: 1.4rem;
+}
+
+.note-content h2 {
+    font-size: 2rem;
+}
+
+.note-content h3 {
+    font-size: 1.4rem;
+}
+
+.note-content > h3 {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}

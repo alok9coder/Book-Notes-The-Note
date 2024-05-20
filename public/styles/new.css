@@ -1,0 +1,45 @@
+
+.textarea {
+    resize: none;
+    width: 80vw;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    box-shadow: black 2px 2px 6px 6px;
+}
+
+.review-area {
+    height: 20vh;
+    padding: 10px;
+}
+
+.notes-area {
+    height: 70vh;
+    padding: 10px;
+}
+
+.input {
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: black 2px 2px 6px 6px;
+}
+
+.submit {
+    float: right;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    font-size: large;
+    background: transparent;
+    font-weight: bold;
+    background-color: rgb(109, 178, 105);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.submit:hover {
+    box-shadow: black 2px 2px 6px 6px;
+    background-color: whitesmoke;
+    text-shadow: black 2px 2px 6px;
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+.header, .footer {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    color: black;
+    text-shadow: black 1px 1px 4px;
+    background-image: url("../images/geometry print.jpg");
+    background-repeat: repeat-y;
+    background-size: fill;
+}
+
+@media(min-width: 1000px) {
+    .container {
+        padding-inline: 10px;
+    }
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    background-color: bisque;
+    width: 100%;
+}
+
+a, li {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.header .logo-link {
+    font-family: "Italiana", sans-serif;
+    font-size: 12rem;
+    font-weight: bold;
+    color: black;
+}
+
+.logo-link {
+    font-family: "Italiana", sans-serif;
+    font-size: 2rem;
+    color: black;
+    text-shadow: black 2px 2px 6px;
+}
+
+.logo-link:hover {
+    color: rgb(100, 100, 100);
+    text-shadow: black 2px 2px 6px;
+}
+
+.footer-container {
+    display: block;
+    background-image: url("../images/smooth-dark-blue.jpg");
+    background-size: fill;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.footer-logo {
+    font-family: "Italiana", sans-serif;
+    font-size: 3rem;
+}
+
+.footer-logo a {
+    font-family: "Italiana", sans-serif;
+    font-weight: 900;
+    text-shadow: black 2px 2px 6px;
+}
+
+.footer-logo:hover a {
+    color: rgb(50, 50, 50);
+    text-shadow: black 2px 2px 6px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.social-icons li {
+    margin-inline: 5px;
+}
+
+.copyright {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 10px;
+}
+

@@ -1,0 +1,23 @@
+
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: baseline;
+}
+
+.delete-button > img {
+    border-radius: 10px;
+    margin-block: 40px;
+}
+
+.delete-button:hover > img {
+    box-shadow: black 2px 2px 6px 6px;
+}
+
+.textarea {
+    font-size: 1.2rem;
+    text-align: left;
+    border-radius: 10px;
+}

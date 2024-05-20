@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs") %>
+
+<div class="about-website">
+    <div class="about-website-child">
+        <div></div>
+        <a href="/new"><h2>POST NEW </h2><img src="images/icons8-plus-1.svg" width="50px" height="50px"></a>
+    </div>
+    <h2>Tiny summary but detailed notes for each. Use the ISBN number to find it from your local library or anywhere
+        else. This
+        page will constantly update as I read more, so bookmark it if you want to check back in a few months.</h2>
+    <h2>Sorted with my top recommendations up top. Sort by <a class="sorting" href="/sort/title">Title</a>, 
+        <a class="sorting" href="/sort/newest">Date</a>, or <a class="sorting" href="/sort/best">Rating</a>.</h2>
+</div>
+
+<div class="container-index">
+    <form class="review-list-container" method="POST">
+        <% if (content.bookdata) { %>
+        <% for (let i = 0; i < content.bookdata.length; i++) { %>
+            <div class="review-container">
+                <button class="review" name="isbn" formaction="/view-note" value="<%= content.bookdata[i].isbn %>">
+                    <img src="<%= content.bookdata[i].cover_url %>">
+                    <div class="review-content">
+                        <h1 class="book-title"><%= content.bookdata[i].title %></h1>
+                        <h2>by <%= content.bookdata[i].author %></h2>
+                        <h4>Date Read: <%= content.bookdata[i].review_date %></h4>
+                        <h4>Rating: <%= content.bookdata[i].book_rating %>/10</h4>
+                        <h3><%= content.bookdata[i].book_review %></h3>
+                    </div>
+                </button>
+                <button class="review-edit-button" name="editisbn" formaction="/edit" value="<%= content.bookdata[i].isbn %>">
+                    <img src="images/icons8-edit.gif" width="70px" height="70px">
+                </button>
+            </div>
+        <% } }%>
+    </form>
+
+    <a href="/new"><img src="images/icons8-plus-1.svg" width="100px" height="100px"></a>
+</div>
+
+<%- include("partials/footer.ejs") %>

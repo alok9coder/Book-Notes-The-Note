@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container-note">
+    <form class="note-form" method="post" action="/edit">
+        <div class="note-content">
+            <div class="note-content-child">
+                <div class="img-cover">
+                    <img src="<%= content.bookdata.cover_url %>">
+                </div>
+                <div>
+                    <button class="review-edit-button" name="editisbn" value="<%= content.bookdata.isbn %>">
+                        <img src="images/icons8-edit.gif" width="70px" height="70px">
+                    </button>
+                    <h1 class="book-title"><%= content.bookdata.title %></h1>
+                    <h2>by <%= content.bookdata.author %></h2>
+                    <p>Date Read: <%= content.bookdata.note_date %></p>
+                    <p>Rating: <%= content.bookdata.book_rating %>/10</p>
+                    <p>ISBN: <%= content.bookdata.isbn %></p>
+                </div>
+            </div>
+            <h2>MY REVIEW</h2>
+            <h3><%= content.bookdata.book_review %></h3>
+            <h2>MY NOTES</h2>
+            <h3><%= content.bookdata.book_notes %></h3>
+        </div>
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

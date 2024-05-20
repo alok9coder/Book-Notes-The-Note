@@ -1,0 +1,43 @@
+<%- include("partials/header.ejs") %>
+
+<div class="edit-container">
+    <form class="delete-form" method="POST">
+        <button class="delete-button" formaction="/delete" name="deleteisbn" value="<%= content.bookdata.isbn %>">
+            <img src="images/icons8-trash.gif" height="100px" width="100px">
+        </button>
+    </form>
+    <form class="edit-form" method="POST" action="/edit/post">
+        <div>
+            <input type="hidden" name="title" value="<%= content.bookdata.title %>">
+            <h1>Book Title: <%= content.bookdata.title %></h1>
+        </div>
+        <div>
+            <h2>Author: </h2><textarea class="textarea" name="author" required autocomplete="off">
+                <%= content.bookdata.author %>
+            </textarea>
+        </div>
+        <div>
+            <h2>ISBN: </h2><input class="input" type="number" name="isbn" value="<%= content.bookdata.isbn %>" required placeholder="ISBN" minlength="10"
+                maxlength="13" autocomplete="off">
+        </div>
+        <div>
+            <h2>Book Rating 0-10: </h2><input class="input" type="number" name="rating" max="10" min="0"
+                value="<%= content.bookdata.bool_review %>" autocomplete="off">
+        </div>
+        <div>
+            <h2>Book Review: </h2><textarea class="textarea review-area" name="review" required
+                autocomplete="off">
+                <%= content.bookdata.book_review %>
+            </textarea>
+        </div>
+        <div>
+            <h2>Book Notes: </h2><textarea class="textarea notes-area" name="note" required
+                autocomplete="off">
+                <%= content.bookdata.book_notes %>
+            </textarea>
+        </div>
+        <input class="input submit" type="submit" value="Submit">
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

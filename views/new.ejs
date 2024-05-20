@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+<div class="new-container">
+    <form class="new-form" method="POST" action="/new/post">
+        <div><h2>Book Title: </h2><textarea class="textarea" name="title" required autocomplete="off"></textarea></div>
+        <div><h2>Author: </h2><textarea class="textarea" name="author" required autocomplete="off"></textarea></div>    
+        <div><h2>ISBN: </h2><input class="input" type="number" name="isbn" required placeholder="ISBN" minlength="10" maxlength="13" autocomplete="off"></div>
+        <div><h2>Book Rating 0-10: </h2><input class="input" type="number" name="rating" required max="10" min="0" autocomplete="off"></div>
+        <div><h2>Date Read: </h2><input class="input" type="date" name="date" required autocomplete="off"></div>
+        <div><h2>Book Review: </h2><textarea class="textarea review-area" name="review" required autocomplete="off"></textarea></div>
+        <div><h2>Book Notes: </h2><textarea class="textarea notes-area" name="note" required autocomplete="off"></textarea></div>
+        <input class="input submit" type="submit" value="Submit">
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>
